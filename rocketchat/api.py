@@ -33,13 +33,17 @@ class RocketChatAPI(object):
         else:
             raise NotImplementedError('You must pass in settings for RocketChat')
 
-    def send_message(self, message, room_id, **kwargs):
+    def send_message(self, message, room_id, thread_message_id=None, **kwargs):
         """
         Send a message to a given room
+        This message takes a room_name instead of a room_id. I did not want to change this to keep
+        the signature stable. TODO: Change to take an actual room_id down the line
         """
+        room_id = self.get_room_id(room_id)
         return SendMessage(settings=self.settings, **kwargs).call(
             message=message,
             room_id=room_id,
+            thread_message_id=thread_message_id,
             **kwargs
         )
 
