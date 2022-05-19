@@ -3,7 +3,7 @@ from rocketchat.calls.channels.get_public_rooms import GetPublicRooms
 from rocketchat.calls.groups.get_private_rooms import GetPrivateRooms
 from rocketchat.calls.channels.get_room_info import GetRoomInfo
 from rocketchat.calls.groups.get_private_room_info import GetPrivateRoomInfo
-from rocketchat.calls.groups.get_room_id import GetRoomId
+from rocketchat.calls.channels.get_room_id import GetRoomId
 from rocketchat.calls.groups.set_room_topic import SetRoomTopic
 from rocketchat.calls.channels.get_history import GetRoomHistory
 from rocketchat.calls.groups.get_private_room_history import GetPrivateRoomHistory

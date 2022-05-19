@@ -6,7 +6,7 @@ logger = logging.getLogger(__name__)
 
 
 class GetRoomId(RocketChatBase):
-    endpoint = '/api/v1/groups.info'
+    endpoint = '/api/v1/channels.info'
 
     def build_endpoint(self, **kwargs):
 
@@ -16,5 +16,4 @@ class GetRoomId(RocketChatBase):
         )
 
     def post_response(self, result):
-        # print(result['group']['_id'])
-        return result['group']['_id']
+        return result['channel']['_id']
